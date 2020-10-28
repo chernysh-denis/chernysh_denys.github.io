@@ -1,0 +1,67 @@
+html {
+  box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+ul,
+li {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+html,
+body {
+  height: 100%;
+}
+
+a {
+  text-decoration: none;
+  transition: color 0.5 ease-in-out;
+}
+
+body {
+  font-family: 'Manrope ', sans-serif;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 24px;
+  color: $black;
+  background-color: $white;
+  min-width: 320px;
+  overflow-x: hidden;
+}
+
+.container {
+  max-width: 1350px;
+  margin: 0 auto;
+  padding: 0 15px;
+}
+
+.d-flex {
+  display: flex;
+}
+
+.f-jcsb {
+  justify-content: space-between;
+}
+
+.f-aic {
+  align-items: center;
+}
+
+.hidden {
+  font-size: 0;
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
