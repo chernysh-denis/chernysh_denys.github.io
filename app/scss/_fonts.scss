@@ -1,29 +1,62 @@
 @font-face {
-  font-family: 'Manrope ';
-  src: local('Manrope  Medium'), local('Manrope--Medium'),
-      url('Manrope-Medium.woff2') format('woff2'),
-      url('Manrope-Medium.woff') format('woff'),
-      url('Manrope-Medium.ttf') format('truetype');
+  font-family: 'Manrope';
+  src:
+      url('../fonts/Manrope-Medium.woff2') format('woff2'),
+      url('../fonts/Manrope-Medium.woff') format('woff'),
+      url('../fonts/Manrope-Medium.ttf') format('truetype');
   font-weight: 500;
   font-style: normal;
+  font-display: swap;
 }
 
 @font-face {
-  font-family: 'Manrope ';
-  src: local('Manrope  Semi bold'), local('Manrope--Semi-bold'),
-      url('Manrope-Semibold.woff2') format('woff2'),
-      url('Manrope-Semibold.woff') format('woff'),
-      url('Manrope-Semibold.ttf') format('truetype');
+  font-family: 'Manrope';
+  src: 
+      url('../fonts/Manrope-Semibold.woff2') format('woff2'),
+      url('../fonts/Manrope-Semibold.woff') format('woff'),
+      url('../fonts/Manrope-Semibold.ttf') format('truetype');
   font-weight: 600;
   font-style: normal;
+  font-display: swap;
 }
 
 @font-face {
-  font-family: 'Manrope ';
-  src: local('Manrope  Bold'), local('Manrope--Bold'),
-      url('Manrope-Bold.woff2') format('woff2'),
-      url('Manrope-Bold.woff') format('woff'),
-      url('Manrope-Bold.ttf') format('truetype');
+  font-family: 'Manrope';
+  src:
+      url('../fonts/Manrope-Bold.otf') format('otf'),
+      url('../fonts/Manrope-Bold.woff2') format('woff2'),
+      url('../fonts/Manrope-Bold.woff') format('woff'),
+      url('../fonts/Manrope-Bold.ttf') format('truetype');
   font-weight: 700;
   font-style: normal;
+  font-display: swap;
 }
+
+
+@font-face {
+	font-family: 'Linearicons-Free';
+	src:url('../fonts/Linearicons-Free.woff2?w118d') format('woff2'),
+		url('../fonts/Linearicons-Free.woff?w118d') format('woff'),
+		url('../fonts/Linearicons-Free.ttf?w118d') format('truetype');
+	font-weight: normal;
+	font-style: normal;
+}
+
+.lnr {
+	font-family: 'Linearicons-Free';
+	// speak: none;
+	font-style: normal;
+	font-weight: normal;
+	font-variant: normal;
+	text-transform: none;
+	line-height: 1;
+
+	/* Better Font Rendering =========== */
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}
+
+.lnr-arrow-right:before {
+	content: "\e87a";
+}
+

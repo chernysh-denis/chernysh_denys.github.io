@@ -1,0 +1,121 @@
+.stage {
+  background-color: $white;
+
+  &__inner {
+    padding-top: 80px;
+    position: relative;
+
+    @media (max-width: 1200px) {
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+
+    @media (max-width: 768px) {
+      justify-content: start;
+      padding-top: 40px;
+    }
+  }
+
+  &__decorations {
+
+    &--one {
+      bottom: 0;
+      left: 60px;
+      background-color: $bg;
+      z-index: 2;
+    }
+
+    &--two {
+      bottom: -10px;
+      left: 420px;
+    }
+
+    &--three {
+      bottom: -10px;
+      right: 420px;
+      width: 120px;
+    }
+
+    &--four {
+      bottom: -20px;
+      right: 420px;
+    }
+
+    &--five {
+      bottom: 0;
+      right: 300px;
+      background-color: $bg;
+      z-index: 2;
+    }
+
+    &--six {
+      bottom: -10px;
+      right: 120px;
+    }
+
+    &--seven {
+      bottom: 0;
+      right: 60px;
+      background-color: $bg;
+      z-index: 2;
+    }
+  }
+
+  &__title {
+    margin: 124px 0 25px;
+    font-size: 34px;
+    font-weight: 600;
+    color: $black;
+  }
+
+  &__competition {
+    width: 33.333%;
+    padding: 69px 60px 60px 60px;
+    background-color: $white;
+    border-right: 1px solid #C4C4C4;
+    transition: color 0.3s ease;
+    position: relative;
+
+    &:hover {
+      background-color: $bg-1;
+    }
+
+    &:last-child {
+      border-right: none;
+    }
+
+    @media (max-width: 1200px) {
+      width: 50%;
+      margin-bottom: 30px;
+      border-right: none;
+      padding: 40px 20px;
+    }
+
+    @media (max-width: 768px) {
+      width: 100%;
+      padding: 20px;
+    }
+  }
+
+  &__img {
+    display: block;
+    margin-bottom: 42px;
+    height: 92px;
+    max-width: 193px;
+  }
+
+  &__date {
+    color: #8D8D8D;
+    font-size: 26px;
+  }
+
+  &__text {
+    margin: 18px 0;
+    font-size: 24px;
+    line-height: 34px;
+
+    @media (max-width: 768px) {
+      width: 100%;
+    }
+  }
+}

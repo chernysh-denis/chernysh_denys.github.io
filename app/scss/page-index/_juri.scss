@@ -1,0 +1,259 @@
+.juri {
+  background-color: $bg-1;
+  position: relative;
+
+  &__decorations {
+    position: relative;
+
+    &--one {
+      width: 120px;
+      left: 420px;
+    }
+
+    &--two {
+      left: 540px;
+      top: 10px;
+    }
+
+    &--three {
+      left: 600px;
+      top: -10px;
+      width: 180px;
+      background-color: $bg-1;
+    }
+
+    &--four {
+      right: 180px;
+      top: -10px;
+      background-color: $bg-1;
+    }
+
+    &--five {
+      left: 300px;
+      bottom: 0;
+      width: 120px;
+    }
+
+    &--six {
+      left: 540px;
+      bottom: -10px;
+      width: 180px;
+      background-color: $bg-1;
+    }
+
+    &--seven {
+      right: 240px;
+      bottom: -10px;
+      background-color: $bg-1;
+    }
+  }
+
+  &__inner {
+    padding: 104px 0 100px;
+
+    @media (max-width: 576px) {
+      padding: 50px 0;
+    }
+  }
+
+  &__btn-box {
+    margin-bottom: 22px;
+  }
+
+  &__foto {
+    flex-wrap: wrap;
+  }
+
+  &__foto-icon {
+    max-width: 132px;
+    max-height: 132px;
+    position: relative;
+    cursor: pointer;
+
+    &:hover+.juri__resume {
+      display: block;
+      position: absolute;
+      left: 0;
+      top: 132px;
+      z-index: 3;
+      width: 264px;
+      background-color: $white;
+      padding: 10px 60px 10px 10px;
+    }
+  }
+
+
+  &__foto-box {
+    opacity: 0;
+  }
+
+  &__foto-decorations {
+    max-width: 132px;
+    max-height: 132px;
+    position: relative;
+
+    &--blue,
+    &--orange,
+    &--blue-2,
+    &--violet,
+    &--yellow,
+    &--red {
+
+      &:hover~.juri__resume {
+        display: block;
+      }
+
+      &:hover+.juri {
+        display: block;
+      }
+
+      &:after {
+        content: " ";
+        background-repeat: no-repeat;
+        background-size: cover;
+        width: 40px;
+        height: 40px;
+        position: absolute;
+        right: 0;
+        bottom: 0;
+        z-index: 2;
+      }
+    }
+
+    &--blue {
+
+      &:after {
+        background-image: url(../images/blue-1.svg);
+      }
+    }
+
+    &--orange {
+
+      &:after {
+        background-image: url(../images/Union_or.svg);
+      }
+    }
+
+    &--blue-2 {
+
+      &:after {
+        background-image: url(../images/Union_blue3.svg);
+      }
+    }
+
+    &--violet {
+
+      &:after {
+        background-image: url(../images/Union_viol2.svg);
+      }
+    }
+
+    &--yellow {
+
+      &:after {
+        background-image: url(../images/Union_yel.svg);
+      }
+    }
+
+    &--red {
+
+      &:after {
+        background-image: url(../images/Union_red.svg);
+      }
+    }
+  }
+
+  &__title {
+    display: block;
+    font-size: 50px;
+    font-weight: 700;
+    color: $white;
+    margin-bottom: 43px;
+
+    @media (max-width: 576px) {
+      font-size: 40px;
+    }
+  }
+
+  &__btn-box {
+
+    @media (max-width: 992px) {
+      flex-wrap: wrap;
+    }
+  }
+
+  &__buttons {
+    @media (max-width: 992px) {
+      margin-bottom: 30px;
+    }
+
+    @media (max-width: 768px) {
+      flex-wrap: wrap;
+    }
+  }
+
+  &__btn {
+    font-size: 18px;
+    font-weight: 500;
+    color: $white;
+    padding: 9px 14px;
+    border: 1px solid #CE68F8;
+    border-right: transparent;
+    cursor: pointer;
+
+    &:hover {
+      background-color: #CE68F8;
+      color: #6D0099;
+    }
+
+    &:last-child {
+      border-right: 1px solid #CE68F8;
+
+      @media (max-width: 992px) {
+        margin-right: 50px;
+      }
+    }
+
+    @media (max-width: 768px) {
+      margin: 0 10px 10px 0;
+      border: 1px solid #CE68F8;
+    }
+  }
+
+  &__link {
+    position: relative;
+    padding: 10px 50px 10px 10px;
+    height: 41px;
+
+    &:after {
+      content: "\e87a";
+      color: $black;
+      position: absolute;
+      right: 14px;
+      font-size: 20px;
+      font-family: 'Linearicons-Free';
+    }
+  }
+
+  &__resume {
+    display: none;
+  }
+
+  &__name {
+    display: block;
+    font-size: 24px;
+    color: $bg-1;
+    margin-bottom: 15px;
+  }
+
+  &__nomination {
+    display: block;
+    font-size: 16px;
+    font-weight: 700;
+    margin-bottom: 15px;
+  }
+
+  &__position {
+    font-size: 16px;
+  }
+}

@@ -17,6 +17,7 @@ li {
 
 html,
 body {
+  overflow-x: hidden;
   height: 100%;
 }
 
@@ -26,7 +27,7 @@ a {
 }
 
 body {
-  font-family: 'Manrope ', sans-serif;
+  font-family: 'Manrope', sans-serif;
   font-style: normal;
   font-weight: 500;
   font-size: 24px;
@@ -64,4 +65,15 @@ body {
   padding: 0;
   clip: rect(0 0 0 0);
   overflow: hidden;
+}
+
+.btn-white {
+  color: $black;
+  background-color: $white;
+  font-size: 18px;
+  font-weight: 600;
+
+  @media (max-width: 768px) {
+    font-size: 15px;
+  }
 }
