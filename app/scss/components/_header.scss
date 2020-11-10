@@ -115,6 +115,10 @@
       }
     }
   }
+  
+  .active {
+    color: $border;
+  }
 
   &__burger {
     display: none;
