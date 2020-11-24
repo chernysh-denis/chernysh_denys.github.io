@@ -115,7 +115,7 @@
       }
     }
   }
-  
+
   .active {
     color: $border;
   }
@@ -235,6 +235,24 @@
       height: 10px;
       bottom: 0;
       left: 0;
+      animation-name: decorations-one;
+      animation-duration: 2s;
+      animation-timing-function: linear;
+      animation-iteration-count: infinite;
+      animation-direction: alternate-reverse;
+      animation-delay: 2s;
+
+
+      @keyframes decorations-one {
+        0% {
+          left: 0;
+        }
+
+        100% {
+          left: 180px;
+        }
+
+      }
     }
 
     &--2 {
@@ -245,11 +263,44 @@
     &--3 {
       bottom: 0;
       left: 420px;
+      animation-name: decorations-three;
+      animation-duration: 2s;
+      animation-timing-function: linear;
+      animation-iteration-count: infinite;
+      animation-direction: alternate-reverse;
+      animation-delay: 2s;
+
+      @keyframes decorations-three {
+        0% {
+          left: 420;
+        }
+
+        100% {
+          left: 480px;
+          width: 30px;
+        }
+      }
     }
 
     &--4 {
       bottom: 10px;
       left: 480px;
+      animation-name: decorations-four;
+      animation-duration: 2s;
+      animation-timing-function: linear;
+      animation-iteration-count: infinite;
+      animation-direction: alternate-reverse;
+      animation-delay: 3s;
+
+      @keyframes decorations-four {
+        0% {
+          left: 480;
+        }
+
+        100% {
+          left: 380px;
+        }
+      }
     }
 
     &--5 {
@@ -271,6 +322,23 @@
       height: 30px;
       right: 196px;
       z-index: 4;
+      animation-name: decorations-seven;
+      animation-duration: 2s;
+      animation-timing-function: linear;
+      animation-iteration-count: infinite;
+      animation-direction: alternate-reverse;
+      animation-delay: 3s;
+
+      @keyframes decorations-seven {
+        0% {
+          right: 196px;
+        }
+
+        100% {
+          right: 230px;
+          width: 80px;
+        }
+      }
     }
 
     &--8 {
@@ -313,12 +381,26 @@
     height: 840px;
   }
 
-
-  &__image-02 {
+  &__image-02,
+  &__image-03, 
+  &__image-04 {
     position: absolute;
     top: 0;
+    width: 750px;
+    object-fit: cover;
     right: 0;
     max-height: 840px;
+  }
+
+  &__image-03, 
+  &__image-04 {
+    opacity: 0;
+    height: 840px;
+    // transition: opacity 0.3s ease-in-out;
+  }
+  
+  .active-image {
+    opacity: 1;
   }
 
   &__title-box {
@@ -405,7 +487,7 @@
       }
 
       &:before {
-       width: 184px;
+        width: 184px;
         height: 20px;
         top: -10px;
         left: 30px;

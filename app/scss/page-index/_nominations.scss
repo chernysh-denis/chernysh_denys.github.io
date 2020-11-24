@@ -88,6 +88,22 @@
 
   &__item-accordion {
     position: relative;
+
+    &:hover {
+      border-bottom: transparent;
+      background-color: $background;
+    }
+    &:hover .nominations__link {
+      display: block;
+
+      @media (max-width: 768px) {
+        display: none;
+      }
+    }
+
+    &:hover .nominations__trigger:after {
+      display: none;
+    }
   }
 
   &__input {
@@ -152,23 +168,7 @@
     position: relative;
     cursor: pointer;
     transition: color 0.5s ease;
-
-    &:hover {
-      border-bottom: transparent;
-      background-color: $background;
-    }
-
-    &:hover+.nominations__link {
-      display: block;
-
-      @media (max-width: 768px) {
-        display: none;
-      }
-    }
-
-    &:hover:after {
-      display: none;
-    }
+    position: relative; 
 
     &:after {
       content: "\e87a";
@@ -218,6 +218,7 @@
     height: 44px;
     top: 17px;
     padding: 12px 15px 9px;
+    z-index: 10;
 
     &:after {
       content: "\e87a";
@@ -236,6 +237,10 @@
 
     &:focus {
       box-shadow: 1px 1px 10px 5px $background;
+    }
+
+    &:hover +.nominations__item-accordion {
+      background-color: $background;
     }
 
     &:hover {

@@ -73,11 +73,15 @@
     padding: 69px 60px 60px 60px;
     background-color: $white;
     border-right: 1px solid #C4C4C4;
-    transition: color 0.3s ease;
     position: relative;
+    transition: color 0.3s ease-in-out;
 
     &:hover {
       background-color: $bg-1;
+    }
+
+    &:hover .stage__date {
+      color: $white;
     }
 
     &:last-child {
